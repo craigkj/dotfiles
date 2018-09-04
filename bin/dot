@@ -6,11 +6,15 @@
 # to make sure you're on the latest and greatest.
 export ZSH=$HOME/.dotfiles
 
-# Set macOS defaults
-$ZSH/macos/set-defaults.sh
-
+read -p "Update OSX defaults? [y/n]" -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Nn]$ ]]
+then
+    # Set OS X defaults
+    bash -c $ZSH/osx/set-defaults
+fi
 # Install homebrew
-$ZSH/homebrew/install.sh 2>&1
+bash -c $ZSH/homebrew/install.sh 2>&1
 
 # Upgrade homebrew
 echo "› brew update"
