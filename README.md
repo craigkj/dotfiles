@@ -4,7 +4,7 @@ Your dotfiles are how you personalise your system, and make managing your custom
 
 This started by forking https://github.com/holman/dotfiles, adding prezto (https://github.com/sorin-ionescu/prezto) and bits and pieces from elsewhere, including https://github.com/paulirish/dotfiles.
 
-Zach Holman wrote a blog post on dotfiles, its well [worth a read](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+Zach Holman wrote a blog post on dotfiles, its well [worth a read](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/). It is well worth spending some time on your dotfiles, learning a bit about how the tools work and how they can make your developer experience more pleasant. You will thank yourself the next time you pick up a new machine!
 
 ## topical
 
@@ -13,13 +13,6 @@ forked dotfiles — say, "Java" — you can simply add a `java` directory and pu
 files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
-
-## what's inside
-
-A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
-above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
-use, and build on what you do use.
 
 ## components
 
@@ -44,8 +37,18 @@ There's a few special files in the hierarchy.
 Run this:
 
 ```sh
+# Get the dotfiles
 git clone https://github.com/craigkj/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+
+# Install https://github.com/sorin-ionescu/prezto.git submodule
+git submodule init
+git submodule update
+
+# Make zsh your default shell
+chsh -s /bin/zsh
+
+# Get started
 script/bootstrap
 ```
 
@@ -60,6 +63,8 @@ script install
 ```
 
 This will install the items from Brewfile. You will likely want to edit the content of this file.
+
+Please see zpresto.symlink/README.md for more info on the prezto options. (Also here https://github.com/sorin-ionescu/prezto.git)
 
 `dot` is a simple script that installs some dependencies, sets sane macOS
 defaults, and so on. Tweak this script, and occasionally run `dot` from
