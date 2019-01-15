@@ -71,5 +71,5 @@ fi
 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH="/Users/jonesc113/Library/Python/2.7/bin:${PATH}"
 export PATH
