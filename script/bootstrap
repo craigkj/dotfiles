@@ -137,11 +137,6 @@ install_dotfiles () {
   done
 }
 
-# Custom symlinking
-# vscode
-ln -sf $(pwd)/../vscode/settings.json "$HOME/Library/Application\ Support/Code/User/settings.json"
-ln -sf $(pwd)/../vscode/keybindings.json "$HOME/Library/Application\ Support/Code/User/keybindings.json"
-
 setup_gitconfig
 install_dotfiles
 

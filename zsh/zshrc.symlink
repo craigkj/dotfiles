@@ -67,3 +67,10 @@ eval "$(jenv init -)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/jonesc113/.nvm/versions/node/v10.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jonesc113/.nvm/versions/node/v10.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/jonesc113/.nvm/versions/node/v10.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jonesc113/.nvm/versions/node/v10.14.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

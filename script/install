@@ -8,7 +8,12 @@ cd "$(dirname $0)"/..
 
 # Run Homebrew through the Brewfile
 #echo "› brew bundle"
-#brew bundle
+brew bundle
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do echo "Running $installer" && sh -c "${installer}" ; done
+
+# Custom symlinking
+# vscode
+ln -sf $(pwd)/../vscode/settings.json "$HOME/Library/Application\ Support/Code/User/settings.json"
+ln -sf $(pwd)/../vscode/keybindings.json "$HOME/Library/Application\ Support/Code/User/keybindings.json"
