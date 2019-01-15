@@ -1,5 +1,10 @@
 {
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
     "editor.renderWhitespace": "all",
-    "window.title": "${activeEditorLong}${separator}${rootName}"
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "files.insertFinalNewline": true,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": -1
 }
